@@ -1,0 +1,40 @@
+.item
+{
+    max-width: 360px;
+    width: 100%;
+    background: $white;
+    margin: 0 auto 15px;
+    text-align: center;
+    cursor: pointer;
+    padding-bottom: 4px;
+   
+    img
+    {
+        max-width: 100%;
+        border: 1px solid #e6e4e4;
+        display: block;
+        margin-bottom: 20px;
+    }
+    
+    
+        .item-name
+        {
+            font-size: $font_larger;
+            line-height: 1em;
+            display: block;
+            height: 2.1em;
+            color: $gray;
+            vertical-align: middle;
+            padding-bottom: 0.2em;
+            text-overflow: ellipsis;
+            overflow:hidden;
+            margin-bottom:10px;
+           text-transform: uppercase;
+           text-decoration: none;           
+
+        }
+        .item-price
+        {
+            margin-bottom: 15px;
+        }
+    }

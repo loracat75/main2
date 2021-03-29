@@ -1,0 +1,62 @@
+.call-block
+{
+    color: $white;
+    text-align: center;
+    background: url("images/call.jpg") no-repeat center;
+    padding: 35px 0;
+    text-transform: uppercase;
+    box-shadow: 0 4px 10px rgba(2,2,2,.14);
+    >div
+    {
+        margin-bottom: 11px;
+    }
+}
+.catalog-container
+{ 
+    display: -webkit-box; 
+    display: -ms-flexbox; 
+    display: flex;
+    flex-wrap: wrap;
+}
+.catalog-item {
+    -webkit-flex: 0 0 25%; 
+    -ms-flex:  0 0 25%; 
+    flex:  0 0 25%;
+    .item
+    {
+        &:hover
+            {
+            .item-name
+            {
+                color: $link;
+            }
+            img
+            {
+                box-shadow: 0 0 5px rgba(12,14,17,.3);
+            }
+        }
+        .item-name
+        {
+            height: auto;
+        }
+    }
+    @media (max-width: 1919px)
+    {
+        -webkit-flex: 0 0 33%; 
+        -ms-flex:  0 0 33%; 
+        flex:  0 0 33%;
+    }
+    @media (max-width: $large-desktop)
+    {
+        -webkit-flex: 0 0 50%; 
+        -ms-flex:  0 0 50%; 
+        flex:  0 0 50%;
+    }
+    @media (max-width: 900px)
+    {
+        -webkit-flex: 0 0 100%; 
+        -ms-flex:  0 0 100%; 
+        flex:  0 0 100%;
+    }
+        
+}

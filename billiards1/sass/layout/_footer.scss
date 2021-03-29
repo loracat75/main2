@@ -1,0 +1,51 @@
+.footer
+{
+    background: $gray;
+    color: $white;
+    padding: 40px 0 40px;
+    .flex-item
+    {
+        margin-bottom: 15px;
+        padding: 15px 5px;
+        &:not(:last-child)
+            {
+            border-right: 1px solid #505050;
+        }
+        .footer-title
+        {
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+        .menu-bottom
+        {
+            a
+            {
+                display: block;
+                color: $white;
+            }
+        } 
+        @media(max-width: $desktop)
+        {
+            &:not(:last-child)
+            {
+            border-right: none;
+            }
+        }
+    }
+}
+.popup
+{
+    padding: 50px 25px 5px; 
+    .table-row
+    {
+        max-width: 250px;
+        margin: 0 auto 15px;
+        label
+        {
+            min-width: 80px;
+            display: inline-block;
+        }
+    }
+}
+
+

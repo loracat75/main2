@@ -1,0 +1,102 @@
+.nav
+{
+    list-style: none;
+    padding: 10px 40px;
+    margin: 0;
+    border-bottom: 1px solid #118d76;
+    .main-menu
+    {
+        list-style: none;
+        li
+        {
+
+            a
+            {
+                color: $white;
+                display: block;
+                font-size: $font-larger;
+                text-decoration: none;
+                padding-bottom: 12px;
+                &:hover
+                    {
+                    color: $nav_link;
+                }
+            }
+            &.current-item
+            {
+                >a
+                {
+                    color: $nav_link;
+                }
+                >ul
+                {
+                    display: block !important;
+                }
+            }            
+        }
+        >li
+        {
+
+            >a
+            {
+                @include transition(all 0.5s ease 0s);
+                text-transform: uppercase;
+                &:hover
+                    {
+                    @include transform(translateX(10px));
+                }
+            }
+             .sub-menu
+            {
+                display: none;
+                >li
+                {
+                    list-style: none;
+
+                    >a
+                    {
+                        padding-left: 25px;
+                        position: relative;
+                        &:before
+                            {
+                            content: "";
+                            border-top: 2px solid $white;
+                            border-right: 2px solid $white;
+                            @include transform(rotate(45deg));
+                            position: absolute;
+                            left: 0;
+                            top: 8px;
+                            width: 10px;
+                            height: 10px;
+                        }
+                    }
+                    .sub-submenu
+                    {
+                        display: none;
+                        padding-left: 67px;
+                        list-style: none;
+                        >li
+                        {
+                            >a:hover
+                                {
+                                @include transform(translateX(-5px));
+                            }
+                        }
+                    }
+                    &:hover, &.current-item
+                    {
+                        >a:before
+                        {
+                            border-color: $nav_link;
+                            @include transform(rotate(135deg));
+                        }
+                    }
+
+                }
+            }
+
+        }
+    }
+
+}
+

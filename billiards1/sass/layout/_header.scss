@@ -1,0 +1,177 @@
+.header-fixed
+{
+    position: fixed;
+    height: 100%;
+    width: 320px;
+    background: $white;
+    border-right: 1px solid #118d76;
+    overflow: hidden;
+    z-index: 50;
+    .inner-header
+    {
+        height: 100%;
+        width: 340px;
+        overflow-x: hidden;
+        overflow-y: auto; 
+        position: relative;
+        background: $green_dark;
+        .header-top
+        {
+            padding: 20px 40px;
+            border-bottom: 1px solid #118d76;
+            font-size: 0;
+            background: $white;
+            .logo
+            {
+                display: inline-block;
+                vertical-align: middle;
+                @media(max-width: $mobile)
+                {
+                    img
+                    {
+                        width: 200px;
+                    }
+                }
+            }
+            .toggle-button
+            {
+                display: none;
+                cursor: pointer;
+                span
+                {
+                    display: block;
+                    width: 30px;
+                    height: 3px;
+                    margin: 5px 0;
+                    background: $green;
+                }
+                &.active-toggle
+                {
+                    span:first-child
+                        {
+                        @include transform(rotate(45deg));
+                        margin: 5px 0 -3px;
+                    }
+                    span:nth-child(2)
+                        {
+                        display: none;
+                    }
+                    span:last-child
+                        {
+                        @include transform(rotate(-45deg));
+                        margin: -3px 0 5px;
+                    }
+                }
+            }
+        }
+        .hidden-nav
+        {
+            .bottom-side
+            {
+                padding: 30px 40px;
+                .form-search
+                {
+                    margin-bottom: 25px;
+                }
+            }
+            #feedback
+            {
+                padding-left: 22px;
+                padding-right: 22px;
+            }
+            .social-block
+            {
+                margin-top: 20px;
+
+                a
+                {
+                    display: inline-block;
+                    color: $green_dark;
+                    background: $white;
+                    text-decoration: none;
+                    font-size: 22px;
+                    width: 36px;
+                    text-align: center;
+                    margin-right: 17px;
+                    padding-top: 3px;
+                }
+
+            }
+            
+        }
+    }
+    @media(max-width: $desktop)
+            {
+                width: 100%;
+                height: auto;
+                max-height: 100%;
+                &.full-header
+                {
+                    height: 100%;
+                    .inner-header
+                    {
+                        /*width: calc(100% + 20px);*/
+                    }
+                }
+                .inner-header
+                {
+                    width: 100%;
+                    .header-top
+                    {
+                       padding: 10px 40px 10px 40px;
+                       text-align: justify;
+                       text-align-last: justify;
+                       .toggle-button
+                       {
+                           display: inline-block;
+                           vertical-align: middle;
+                       }
+                    }
+                    .hidden-nav
+                    {
+                        display: none;
+                    }
+                }
+            }
+}
+.about-price
+{
+    color: $white;
+    font-size: 19px;
+    text-transform: uppercase;
+    font-weight: 700;
+    background: #c14922;
+    margin-top: 5px;
+    letter-spacing: 1.4px;
+    padding: 0 5px;
+    display: inline-block;
+    line-height: 1.25;
+    @media(max-width: $mobile)
+    {
+        display: none;
+    }
+}
+.contacts-info
+{
+    margin-bottom: 15px;
+    color: $white;
+    i
+    {
+        font-size: 24px;
+        display: table-cell;
+        vertical-align: middle;
+        &.icon-mobile+span
+        {
+            font-weight: bold;
+        }
+
+    }
+
+    span
+    {
+        display: table-cell;
+        vertical-align: middle;
+        padding-left: 7px;
+    }
+}
+

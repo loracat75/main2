@@ -1,0 +1,87 @@
+.bottom-form
+{
+    color: $white;
+    background: url(images/form_bg.jpg) no-repeat center;
+    padding: 25px 0;
+    .h1
+    {
+        color: $white;
+    }
+    .form-block
+    {
+        max-width: 545px;
+        margin: 0 auto;
+    }
+}
+.input-text
+{
+    width: 100%;
+    border: 1px solid $orange;
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #505050;
+    &:focus
+        {
+        border-color: $white;
+        outline: 0;
+        box-shadow: 0 0 3px #c1c1c1;
+    }
+
+}
+.input-text-small
+{
+    max-width: 160px;
+    height: 30px;
+    border: 1px solid $orange;
+}
+.form-note
+{
+    margin: 15px auto;
+    max-width: 350px;
+    font-size: $font-smaller;
+}
+textarea.input-text
+{
+    resize: none;
+    height: 100px;
+    padding: 15px;
+}
+.bottom-form
+{
+    input.input-text
+    {
+        max-width: 263px;        
+        text-align: center;
+        text-align-last: center;
+        height: 45px;
+    }
+    @media(max-width: $mobile)
+        {
+        padding: 25px 20px;
+        input.input-text
+        {
+            max-width: none;
+        }
+    }
+}
+
+.error
+{
+    border-color: #b81515 !important;
+    box-shadow: 0 0 5px #b81515;
+    &:focus
+        {
+        box-shadow: none;
+    }
+}
+.input-search
+{
+    padding: 15px 8px ;
+    border: 1px solid #e6e4e4;
+    width: 195px;
+    text-transform: uppercase;
+    display: inline-block;
+    @include box-sizing(border-box);
+    vertical-align: top;
+    height: 46px;  
+}

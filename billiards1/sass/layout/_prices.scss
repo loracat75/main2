@@ -1,0 +1,15 @@
+.price
+{
+    color: $red;
+    font-size: $font-larger;
+    font-family: 'Russo One';
+    &-thin
+    {
+        font-family: 'Scada';
+        font-weight: 400;
+    }
+    &-large
+    {
+        font-size: 36px;
+    }
+}

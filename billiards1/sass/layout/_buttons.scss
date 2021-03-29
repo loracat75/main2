@@ -1,0 +1,73 @@
+.btn
+{
+    border: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 15px 40px;
+    color: $white;
+    line-height: 1em;
+    cursor: pointer;
+    display:inline-block;
+    font-style: normal !important;
+    &:hover
+        {
+        color: $white;
+        text-decoration: none;
+    }
+    @include transform(all 0.5s ease 0s);
+    &-green
+    {
+        background: $green_dark;
+        &:hover
+            {
+            background: $nav_link;
+            color: $green_dark;
+        }
+    }
+    &-white
+    {
+        background: $white;
+        color: $green_dark;
+        &:hover
+        {
+            background: $nav_link;
+            color: $green_dark;
+        }
+    }
+
+    &-orange
+    {
+        background: $orange;
+        &:hover
+            {
+            background: $link;
+        }
+    }
+
+    &-search
+    {
+
+        display: inline-block;
+        width: 45px;
+        vertical-align: top;
+        margin-left: -6px;
+        font-size: 40px;
+        line-height: 1.35;
+        padding: 0;
+        font-weight: 700;
+        height: 46px;
+        background: $nav_link;
+        color: $green_dark;
+    }
+    &-small
+    {
+        font-size: $font-larger;
+        padding: 6px 12px;
+        text-transform: none;
+        margin-bottom: 10px;
+        &.active
+        {
+            background: $link;
+        }
+    }
+}

@@ -1,0 +1,32 @@
+@mixin transform($transforms) {
+	-moz-transform: $transforms;
+	-o-transform: $transforms;
+	-ms-transform: $transforms;
+	-webkit-transform: $transforms;
+	transform: $transforms;
+}
+@mixin transition($transition) {
+	-moz-transition: $transition;
+	-o-transition: $transition;
+	-ms-transition: $transition;
+	-webkit-transition: $transition;
+	transition: $transition;
+}
+
+@mixin rotate ($deg) {
+	@include transform(rotate(#{$deg}deg));
+}
+@mixin box-sizing($box-sizing)
+{
+    -moz-box-sizing: $box-sizing;
+     -webkit-box-sizing: $box-sizing;
+     box-sizing: $box-sizing;
+}
+
+
+@mixin placeholder {
+	&::-webkit-input-placeholder { @content; }
+	&:-moz-placeholder           { @content; }
+	&::-moz-placeholder          { @content; }
+	&:-ms-input-placeholder      { @content; }  
+}

@@ -1,0 +1,116 @@
+//colors
+$main: #505050;
+$gray: #333;
+$gray_light: #616161;
+
+
+
+$green: #7bd97d;
+$red: #c14922;
+$white: #fff;
+$orange: #e7cb3d;
+$link: #16aa19;
+$nav_link: #b1f6e9;
+$green_dark: #006b57;
+
+//fonts 
+$font: Scada, Arial, Helvetica, sans-serif;
+$font_base: 16px;
+$font_smaller: 14px;
+$font_smallest: 12px;
+
+$font_larger: 18px;
+$mobile: 640px;
+$tablet: 768px;
+$large-desktop: 1440px;
+$desktop: 1200px;
+$small-desktop: 1024px;
+
+a {
+	color: $link;
+	text-decoration: underline;
+}
+a:hover {
+	text-decoration: none;
+}
+
+.clearfix
+{
+	clear: both;
+}
+
+.center-block
+{
+    margin: 0 auto;
+    display: block;
+}
+.img-responsive
+{
+    display: block;
+    max-width: 100%;
+}
+.d-inline
+{
+    display: inline-block
+}
+.text-center
+{
+    text-align: center;
+}
+.text-justify
+{
+    text-align: justify;
+    text-align-last: justify;
+}
+.text-left
+{
+    text-align: left;
+}
+.text-uppercase
+{
+    text-transform: uppercase;
+}
+.small-text
+{
+    font-size: $font-smaller;
+}
+.large-text
+{
+    font-size: $font_larger;
+}
+
+textarea:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
+textarea:focus::-moz-placeholder {opacity: 0; transition: opacity 0.3s ease;}
+textarea:focus:-moz-placeholder {opacity: 0; transition: opacity 0.3s ease;}
+textarea:focus:-ms-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
+
+input[type=text]:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
+input[type=text]:focus::-moz-placeholder {opacity: 0; transition: opacity 0.3s ease;}
+input[type=text]:focus:-moz-placeholder {opacity: 0; transition: opacity 0.3s ease;}
+input[type=text]:focus:-ms-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
+
+.flex-container
+{ 
+    display: -webkit-box; 
+    display: -ms-flexbox; 
+    display: flex;
+    flex-wrap: wrap;
+}
+.flex-item {
+    -webkit-flex: 1 1 25%; 
+    -ms-flex:  1 1 25%; 
+    flex:  1 1 25%;
+    @media (max-width: $desktop)
+    {
+        -webkit-flex: 1 1 50%; 
+        -ms-flex:  1 1 50%; 
+        flex:  1 1 50%;
+    }
+    @media (max-width: $mobile)
+    {
+        -webkit-flex: 1 1 100%; 
+        -ms-flex:  1 1 100%; 
+        flex:  1 1 100%;
+    }
+        
+}
